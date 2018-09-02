@@ -14,13 +14,18 @@ import router from './routers';
 import 'bootstrap/dist/css/bootstrap.css';
 import './assets/css/index.css';
 
-import axios from 'axios';
+// import axios from 'axios';
 // 在 vue 原型上绑定axios
-Vue.prototype.$http = axios;
+// Vue.prototype.$http = axios;
+
+// axios.defaults.baseURL = 'http://localhost:3001/';
+
+
+import MyHttp from './plugins/MyHttp';
+
+Vue.use(MyHttp);
 
 // 这是组件
-
-
 new Vue({
     el: '#app',
     render: h => h(App),
