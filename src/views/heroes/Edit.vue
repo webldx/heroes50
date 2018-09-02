@@ -39,7 +39,7 @@ export default {
     },
     methods: {
         loadData() {
-            axios.get(`http://localhost:3001/heroes/${this.id}`)
+            this.$http.get(`heroes/${this.id}`)
                 .then((response) => {
                     this.formData = response.data
                 })
@@ -48,7 +48,7 @@ export default {
                 })
         },
         handleAdd() {
-            axios.put(`http://localhost:3001/heroes/${this.id}`, this.formData)
+            this.$http.put(`heroes/${this.id}`, this.formData)
                 .then((response) => {
                     this.$router.push('/heroes');
                 })

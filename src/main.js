@@ -14,7 +14,9 @@ import router from './routers';
 import 'bootstrap/dist/css/bootstrap.css';
 import './assets/css/index.css';
 
-
+import axios from 'axios';
+// 在 vue 原型上绑定axios
+Vue.prototype.$http = axios;
 
 // 这是组件
 

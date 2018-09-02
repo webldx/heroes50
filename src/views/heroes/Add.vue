@@ -36,7 +36,7 @@ export default {
     },
     methods: {
         handleAdd(){
-            axios.post('http://localhost:3001/heroes', this.formData)
+            this.$http.post('heroes', this.formData)
                 .then((response) => {
                     if (response.status === 201) {
                         this.$router.push('/heroes')

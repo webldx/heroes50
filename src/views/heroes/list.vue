@@ -52,7 +52,7 @@ export default {
   methods: {
     // 发送请求 将数据渲染到页面上
     loadData() {
-      axios.get('http://localhost:3001/heroes')
+      this.$http.get('http://localhost:3001/heroes')
         .then((response) => {
           if (response.status === 200) {
             this.list = response.data;
@@ -67,7 +67,7 @@ export default {
       if (!confirm('确定删除')) {
         return;
       };
-      axios.delete(`http://localhost:3001/heroes/${id}`)
+      this.$http.delete(`heroes/${id}`)
         .then((response) => {
           if (response.status === 200) {
             this.loadData();
