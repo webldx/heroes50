@@ -12,11 +12,11 @@
             </div>
         </div>
     </nav>
-</template>
+</template> 
 
 <script>
 export default {
-
+    
 }
 </script>
 
