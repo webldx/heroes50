@@ -21,6 +21,8 @@
 import AppHeader from './components/AppHeader';
 // 导入组件
 import AppSidebar from './components/AppSidebar';
+// 导入英雄列表
+import HeroList from './views/heroes/list';
 
 // ES6中模块化的语法, 导出一个模块,就是一个组件
 export default {
@@ -30,10 +32,7 @@ export default {
     AppHeader,
     AppSidebar
   },
-  data () {
-    // return {
-    // }
-  }
+
 };
 </script>
 
